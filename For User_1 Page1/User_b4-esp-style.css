@@ -1,0 +1,211 @@
+body {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-family: Arial;
+    top: 50%;
+    left: 50%;
+}
+
+/*
+@media screen and (max-width: 700px) {
+    body {
+        width: 100%;
+    }
+}
+*/
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 { font-size: 2.5rem; }
+
+.header {
+	 padding: 1rem;
+	 margin: 0 0 2rem 0;
+	 background: #0340aa;
+	 
+}
+
+h1 {
+    font-size: 2rem;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    /*text-transform: uppercase;*/
+    color: White;
+}
+
+.content {
+    width: 60%;
+    margin: auto;
+    display: flex;
+}
+
+@media screen and (max-width: 500px) /* Mobile */ {
+    .content {
+        flex-direction: column;
+    }
+}
+
+.mask {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 12.5rem;
+    height: 6.25rem;
+    margin: 1.25rem;
+}
+
+.semi-circle {
+    position: relative;
+    display: block;
+    width: 12.5rem;
+    height: 6.25rem;
+    background: linear-gradient(to right, #D2DDE4 0%, #3498db 33%, #025289 70%, #c0392b 100%);
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
+}
+
+.semi-circle::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 2;
+    display: block;
+    width: 8.75rem;
+    height: 4.375rem;
+    margin-left: -4.375rem;
+    background: #fff;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
+}
+
+.semi-circle--mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12.5rem;
+    height: 12.5rem;
+    background: transparent;
+    transform: rotate(120deg) translate3d(0, 0, 0);
+    transform-origin: center center;
+    backface-visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.semi-circle--mask::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0%;
+    z-index: 2;
+    display: block;
+    width: 12.625rem;
+    height: 6.375rem;
+    margin: -1px 0 0 -1px;
+    background: #f2f2f2;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
+}
+
+.mask1 {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 12.5rem;
+    height: 6.25rem;
+    margin: 1.25rem;
+}
+
+.semi-circle1 {
+    position: relative;
+    display: block;
+    width: 12.5rem;
+    height: 6.25rem;
+    background: linear-gradient(to right, #D2DDE4 0%, #3498db 33%, #025289 70%, #c0392b 100%);
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
+}
+
+.semi-circle1::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 2;
+    display: block;
+    width: 8.75rem;
+    height: 4.375rem;
+    margin-left: -4.375rem;
+    background: #fff;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
+}
+
+.semi-circle--mask1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12.5rem;
+    height: 12.5rem;
+    background: transparent;
+    transform: rotate(120deg) translate3d(0, 0, 0);
+    transform-origin: center center;
+    backface-visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.semi-circle--mask1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0%;
+    z-index: 2;
+    display: block;
+    width: 12.625rem;
+    height: 6.375rem;
+    margin: -1px 0 0 -1px;
+    background: #f2f2f2;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
+}
+
+.button {
+    background: #0340aa;
+    color: white;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    transition-duration: 0.2s;
+    font-family: Arial;
+    text-decoration: none;
+}
+
+.button:hover {
+  background-color: #6FA0F5;
+  color: White;
+}
+
+
+/*.gauge--2 .semi-circle { background: linear-gradient(to right, #D2DDE4 0%, #3498db 33%, #025289 70%, #c0392b 100%); }*/
+
+/*.gauge--2 .semi-circle--mask { transform: rotate(120deg) translate3d(0, 0, 0); }*/
+
+#tableReadings { border-collapse: collapse; }
+
+#tableReadings td, #tableReadings th {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+#tableReadings tr:nth-child(even){ background-color: #E0F7FF; }
+
+#tableReadings tr:hover { background-color: #4cdbf9; }
+
+#tableReadings th {
+    padding: 10px;
+    background-color: #0340aa;
+    color: white;
+}
